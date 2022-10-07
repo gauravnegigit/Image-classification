@@ -1,0 +1,124 @@
+:root{
+    --main-bg-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex ;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.logo{
+    display: flex ;
+    align-items : center ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8vh;
+    color: white;
+    justify-content: center;
+}
+
+
+header{
+    height: 15vh;
+    background: var(--main-bg-color);
+    /* border: 2px solid red; */
+}
+
+.container{
+    min-height: calc(100vh - 58px - 12vh); /* here minimum height = total height - header's height - footer's height*/
+}
+
+.btn{
+    padding: 5px 10px;
+    color: white;
+    background: var(--main-bg-color);
+    border: 2px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: rgb(229, 221, 221);
+    font-weight: bolder;
+}
+
+.card{
+    max-width: 91vw;
+    margin: 10px auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cards{
+    display: flex; 
+    /* overflow: hidden; */
+}
+
+
+.card-item{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 15px;
+    /* width:15vw ; 
+    height: 40vh; */
+}
+
+.card-item img {
+    padding-top: 8vh;
+    width: 14vw;
+    height: 38vh;
+    object-fit: cover;
+}
+
+.text-center{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+}
+
+/* css implementation for table and dropmin */
+
+.result {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    line-height: initial;
+    color: black;
+    text-align: center;
+  }
+
+
+.row{
+    padding-top: 50vh;
+}
+
+#classTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#classTable td, #classTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+#classTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blueviolet;
+    color: white;
+  }
+
+.dropzone {
+    border-style: dashed;
+    width: 200px ; 
+    height: 200px ; 
+  }

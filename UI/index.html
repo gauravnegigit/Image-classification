@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMAGE CLASSIFICATION</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="dropzonemin.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Five Faces Classifier</div>
+
+        <div class="cards">
+          <div class="card-item position-relative rounded-circle overflow-hidden mx-auto " name = "gates">
+            <img src="images/gates.jpg" alt="" />
+            <div class="lines">
+              <p class="text-center">BILL GATES</p>
+            </div>
+          </div>
+          <div class="card-item position-relative rounded-circle overflow-hidden mx-auto" name = "jack">
+            <img src="images/jack.jpg " alt="" />
+            <div class="lines">
+              <p class="text-center">JACK MA</p>
+            </div>
+          </div>
+          <div class="card-item position-relative rounded-circle overflow-hidden mx-auto " name = "modi">
+            <img src="images/modi.jpg" alt="" />
+            <div class="lines">
+              <p class="text-center">MODI</p>
+            </div>
+          </div>
+          <div class="card-item position-relative rounded-circle overflow-hidden mx-auto " name= "musk">
+            <img src="images/musk.jpg" alt="" />
+            <div class="lines">
+              <p class="text-center">ELON MUSK</p>
+            </div>
+          </div>
+          <div class="card-item position-relative rounded-circle overflow-hidden mx-auto " name = "trump">
+            <img src="images/trump.jpg" alt="" />
+            <div class="lines">
+              <p class="text-center">TRUMP</p>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- this part of the code deals with the drag and drop and the table for CLASSIFICATION -->
+    <div class="row">
+      <div class="col-sm-4">
+          <div class="col-12 mx-auto drop">
+              <form action="/file-upload" class="dropzone" id="dropzone">
+                  <div class="dz-message needsclick">
+                      <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                      <span class="note needsclick">Drop files here or click to upload</span>
+                  </div>
+              </form>
+          </div>
+          <div class="mt-3">
+              <div class="col-3 mx-auto">
+                  <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+              </div>
+          </div>
+      </div>
+      
+      <div class="col-sm-4 result " id="result" >    
+      </div>
+
+      <div class="col-sm-4" id="divClassTable">
+          <table id="classTable">
+                  <tr>
+                      <th>Faces</th>
+                      <th>Probability Score</th>
+                  </tr>
+                  <tr>
+                      <td>BILL GATES</td>
+                      <td id="score_gates"></td>
+                  </tr>
+                  <tr>
+                      <td>JACK MA</td>
+                      <td id="score_jack"></td>
+                  </tr>
+                  <tr>
+                      <td>NARENDRA MODI</td>
+                      <td id="score_modi"></td>
+                  </tr>
+                  <tr>
+                      <td>ELON MUSK</td>
+                      <td id="score_musk"></td>
+                  </tr>
+                  <tr>
+                      <td>DONALD TRUMP</td>
+                      <td id="score_trump"></td>
+                  </tr>
+          </table>
+      </div>
+      
+  </div>
+
+  </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="dropzonemin.js"></script>
+<script src="script.js"></script>
+
+</html>
